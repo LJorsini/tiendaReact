@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { Navbar } from "./components/Navbar/Navbar";
+import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
+/* import { FontAwesomeIcon } from "@"; */
+/* import { Icons } from "./components/Icons/Icons"; */
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+      <Navbar/>
+
+      <ItemListContainer nombre = "Micro Intel I7" precio = {120000}/>
+      <ItemListContainer nombre = "Micro Intel I5" precio = {85000}/>
+      
+      
+      
+      
+      </div>
+    
   );
 }
 
