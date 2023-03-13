@@ -1,4 +1,6 @@
 .contenedor__ItemList {
+    display: flex;
+    justify-content: space-evenly;
     text-align: center;
     font-size: 2rem;
 }

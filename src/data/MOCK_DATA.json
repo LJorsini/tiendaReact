@@ -1,0 +1,66 @@
+ [
+    {
+        "id": 1,
+        "name": "Micro intel I3",
+        "description": "Micro intel I3 tanto",
+        "price": 45000,
+        "img": "https://via.placeholder.com/220",
+        "category" : "micros"
+
+    },
+        
+    {
+        "id": 2,
+        "name": "Micro intel I5",
+        "description": "Micro intel I5 tanto",
+        "price": 71000,
+        "img": "https://via.placeholder.com/220",
+        "category" : "micros"
+    },
+
+    {
+        "id": 3,
+        "name": "Micro intel I7",
+        "description": "Micro intel I7 tanto",
+        "price": 126000,
+        "img": "https://via.placeholder.com/220",
+        "category" : "micros"
+    },
+
+    {
+        "id": 4,
+        "name": "HyperX 8Gb",
+        "description": "Memoria 8Gb",
+        "price": 126000,
+        "img": "https://via.placeholder.com/220",
+        "category" : "memorias"
+    },
+
+    {
+        "id": 5,
+        "name": "HuperX 16Gb",
+        "description": "Memorias 8GB",
+        "price": 126000,
+        "img": "https://via.placeholder.com/220",
+        "category" : "memorias"
+    },
+
+    {
+        "id": 6,
+        "name": "HyperX 32GB",
+        "description": "MEmoris 32Gb",
+        "price": 126000,
+        "img": "https://via.placeholder.com/220",
+        "category" : "memorias"
+    },
+
+    {
+        "id": 7,
+        "name": "Asus Z690",
+        "description": "Asus",
+        "price": 126000,
+        "img": "https://via.placeholder.com/220",
+        "category" : "mothers"
+
+    }
+]
