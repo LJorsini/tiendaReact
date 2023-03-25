@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import './ItemListContainer.css';
 import { pedirDatos } from '../../helpers/pedirdatos';
 import { ItemList } from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
+import { CartContext } from '../Context/CartContext';
 
 
 
@@ -14,7 +15,10 @@ import { useParams } from 'react-router-dom';
         })
     } */
 
-export const ItemListContainer = (props) => {
+export const ItemListContainer = () => {
+
+    const contexto = useContext(CartContext)
+    console.log(contexto)
     
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
@@ -49,7 +53,7 @@ export const ItemListContainer = (props) => {
 
     
     return (
-        <div className = "contenedor__ItemList">
+        <div className = "contenedor__ItemList container ">
             {
                 loading 
                 ? <h2>Cargando...</h2>

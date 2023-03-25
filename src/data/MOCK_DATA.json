@@ -5,7 +5,8 @@
         "description": "Micro intel I3 tanto",
         "price": 45000,
         "img": "https://via.placeholder.com/220",
-        "category" : "micros"
+        "category" : "micros",
+        "stock" : 5
 
     },
         
@@ -15,7 +16,8 @@
         "description": "Micro intel I5 tanto",
         "price": 71000,
         "img": "https://via.placeholder.com/220",
-        "category" : "micros"
+        "category" : "micros",
+        "stock" : 5
     },
 
     {
@@ -24,7 +26,8 @@
         "description": "Micro intel I7 tanto",
         "price": 126000,
         "img": "https://via.placeholder.com/220",
-        "category" : "micros"
+        "category" : "micros",
+        "stock" : 5
     },
 
     {
@@ -33,7 +36,8 @@
         "description": "Memoria 8Gb",
         "price": 126000,
         "img": "https://via.placeholder.com/220",
-        "category" : "memorias"
+        "category" : "memorias",
+        "stock" : 5
     },
 
     {
@@ -42,7 +46,8 @@
         "description": "Memorias 8GB",
         "price": 126000,
         "img": "https://via.placeholder.com/220",
-        "category" : "memorias"
+        "category" : "memorias",
+        "stock" : 5
     },
 
     {
@@ -51,7 +56,8 @@
         "description": "MEmoris 32Gb",
         "price": 126000,
         "img": "https://via.placeholder.com/220",
-        "category" : "memorias"
+        "category" : "memorias",
+        "stock" : 5
     },
 
     {
@@ -60,7 +66,8 @@
         "description": "Asus",
         "price": 126000,
         "img": "https://via.placeholder.com/220",
-        "category" : "mothers"
+        "category" : "mothers",
+        "stock" : 5
 
     }
 ]
