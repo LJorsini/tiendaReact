@@ -1,11 +1,14 @@
-import {  useNavigate } from "react-router-dom"
+import {  Link, useNavigate } from "react-router-dom"
 import { useContext, useState } from "react"
 import { ItemCount } from "../ItemCount/ItemCount"
 import { CartContext } from "../Context/CartContext"
 
 
 export const ItemDetail = ({item}) => {
-    const {carrito, setCarrito} = useContext(CartContext)
+
+    const { agrgarAlCarrito, isInCart } = useContext(CartContext)
+
+    console.log(isInCart(item.id))
 
     const [cantidad, setCantidad] = useState(1)
 
@@ -20,9 +23,9 @@ export const ItemDetail = ({item}) => {
             ...item,
             cantidad
         }
-        console.log(newItem)
+        agrgarAlCarrito(newItem)
         
-        setCarrito( [...carrito, newItem] )
+        /* setCarrito( [...carrito, newItem] ) */
     }
     
 
@@ -33,12 +36,23 @@ export const ItemDetail = ({item}) => {
                     <p>{item.description}</p>
                     <p>Precio: $ <strong>{item.price}</strong></p>
 
-                    <ItemCount 
+                    {/* <ItemCount 
                         max = {item.stock}
                         cantidad = {cantidad}
                         setCantidad = {setCantidad}
                         handleAgregar = {handleAgregar}
-                    />
+                    />  */}
+
+                    {
+                        isInCart(item.id) 
+                            ? <Link to="/cart" className="btn btn-success">Finalizar Compra</Link>
+                            : <ItemCount 
+                            max = {item.stock}
+                            cantidad = {cantidad}
+                            setCantidad = {setCantidad}
+                            handleAgregar = {handleAgregar}
+                        /> 
+                    }
 
 
                     <button onClick={handleVolver} className="btn btn-primary">VOLVER</button>

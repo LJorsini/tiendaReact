@@ -1,6 +1,7 @@
 import './Navbar.css';
 import { Icons } from '../Icons/Icons';
 import { Link } from 'react-router-dom';
+import { CartWidget } from '../CartWidget/CartWidget';
 
 export const Navbar = () => {
 
@@ -18,7 +19,8 @@ export const Navbar = () => {
                     
                 </nav>
 
-                <div><Icons></Icons></div>
+                {/* <div><Icons></Icons></div> */}
+                <CartWidget/>
             </div>
 
         </header>
