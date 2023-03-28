@@ -4,6 +4,8 @@ import { pedirDatos } from '../../helpers/pedirdatos';
 import { ItemList } from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
 import { CartContext } from '../Context/CartContext';
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import { db } from '../../firebase/config';
 
 
 
@@ -30,7 +32,31 @@ export const ItemListContainer = () => {
     useEffect(() => {
         setLoading(true)
 
-        pedirDatos()
+        const productosRef = collection(db, "productos")
+        const q = categoryId
+                    ? query(productosRef, where("category", "==", categoryId))
+                    : productosRef
+         
+
+        getDocs(q)
+        .then((res) => {
+            const docs = res.docs.map((doc) => {
+
+                return {...doc.data(), id: doc.id}
+
+            })
+
+            console.log(docs)
+            setProductos(docs)
+        })
+        .finally(() => {
+            setLoading(false)
+        })
+
+
+
+
+        /* pedirDatos()
         .then((response) => {
              if (!categoryId) {
                 setProductos(response)
@@ -47,7 +73,7 @@ export const ItemListContainer = () => {
         })
         .finally (() => {
             setLoading(false)
-        })
+        }) */
 
     }, [categoryId])
 
